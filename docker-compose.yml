@@ -1,6 +1,6 @@
 services:
   db:
-    image: postgres:${POSTGRES_VERSION:-13}
+    image: postgres:${POSTGRES_VERSION:-17}
     restart: unless-stopped
     stop_grace_period: 3s
     volumes:
