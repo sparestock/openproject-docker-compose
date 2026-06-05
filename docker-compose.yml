@@ -36,6 +36,7 @@ services:
       RAILS_MIN_THREADS: ${RAILS_MIN_THREADS:-4}
       RAILS_MAX_THREADS: ${RAILS_MAX_THREADS:-16}
     volumes:
+      - ./enterprise_token.rb:/app/app/models/enterprise_token.rb
       - opdata:/var/openproject/assets
     depends_on:
       db:
@@ -61,6 +62,7 @@ services:
       RAILS_MAX_THREADS: ${RAILS_MAX_THREADS:-16}
       IMAP_ENABLED: "${IMAP_ENABLED:-false}"
     volumes:
+      - ./enterprise_token.rb:/app/app/models/enterprise_token.rb
       - opdata:/var/openproject/assets
     depends_on:
       db:
@@ -92,6 +94,7 @@ services:
       RAILS_MAX_THREADS: ${RAILS_MAX_THREADS:-16}
       IMAP_ENABLED: "${IMAP_ENABLED:-false}"
     volumes:
+      - ./enterprise_token.rb:/app/app/models/enterprise_token.rb
       - opdata:/var/openproject/assets
     depends_on:
       db:
@@ -114,6 +117,7 @@ services:
       RAILS_MIN_THREADS: ${RAILS_MIN_THREADS:-4}
       RAILS_MAX_THREADS: ${RAILS_MAX_THREADS:-16}
     volumes:
+      - ./enterprise_token.rb:/app/app/models/enterprise_token.rb
       - opdata:/var/openproject/assets
     depends_on:
       seeder:
